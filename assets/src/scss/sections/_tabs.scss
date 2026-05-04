@@ -1,6 +1,13 @@
 $black: #000;
 .tabs-section {
-  margin: 80px 0;
+  margin: 60px 0;
+  padding: 20px 0;
+  @media (max-width: 767px)  {
+    background: #FAF5F3;
+    &__top{
+      padding: 0 23px;
+    }
+  }
 }
 
 .tabs-title {
@@ -13,27 +20,50 @@ $black: #000;
   }
 }
 
-.tabs-subtitle {
-  margin-bottom: 32px;
-  color: #666;
+.tabs{
+  &-pretitle{
+    margin-bottom: 10px;
+    color: #58656D;
+  }
+  &-subtitle {
+    margin-bottom: 32px;
+    padding-left: 15px;
+    color: $black;
+  }
 }
 
+simple-tabs{
+  overflow: hidden;
+}
 .tabs-nav {
   display: flex;
-  flex-wrap: wrap;
   gap: 34px;
   margin-bottom: 81.5px;
-
+  &__scroll{
+    width: 1100px;
+    overflow-x: scroll;
+  }
+  @media (max-width: 1130px) {
+    gap: 28px;
+  }
+  @media (max-width: 767px) {
+    gap: 24px;
+  }
   button {
+    display: flex;
+    align-items: center;
+    gap: 3px;
     padding: 10px 16px;
     border: 1px solid #ff5a1f;
     background: transparent;
     cursor: pointer;
     border-radius: 6px;
     font-family: "Figtree", sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 3px;
+    font-size: 15px;
+    color: #ff5a1f;
+    &.is-active{
+      color: #fff;
+    }
     &.tab-1 {
       .no-active{
         display: block;
@@ -114,6 +144,7 @@ $black: #000;
         height: 51.45px;
         background-color: #C4C4C4;
         border-radius: 10px;
+
       }
       &__desc{
         width: calc(100% - 76.5px);

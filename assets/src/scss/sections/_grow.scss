@@ -2,6 +2,9 @@ $azure39: #58656D;
 .grow {
   position: relative;
   margin: 106.5px 0;
+   @media (min-width: 767px) {
+      margin: 40px 0;
+  }
   &__grid {
     position: relative;
     display: grid;
@@ -24,7 +27,7 @@ $azure39: #58656D;
       @media (max-width: 1130px) {
         background-size: 132% auto;
       }
-      @media (max-width: 1024px) {
+      @media (max-width: 1023px) {
         display: none;
       }
 
@@ -45,36 +48,52 @@ $azure39: #58656D;
     background-origin: border-box;
     background-clip: padding-box, border-box;
     @media (max-width: 1130px) {
-      height: 24vw;
+      min-height: 24vw;
+      height: auto;
     }
-    @media (max-width: 1024px) {
-      height: 280px;
+    @media (max-width: 1023px) {
+      min-height: px;
+      height: auto;
+    }
+    @media (max-width: 767px) {
+      min-height: 193px;
     }
   }
   &-head{
     .grow__title{
       line-height: 38px;
+      @media (max-width: 767px) {
+        font-weight: 500;
+        font-size: 40px;
+      }
       span{
         display: block;
         font-size: 16px;
         line-height: 18px;
         color: $azure39;
+        letter-spacing: 0px;
       }
     }
     .grow__desc{
-        font-size: 16px;
-        line-height: 18px;
-        color: $azure39;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $azure39;
     }
   }
   &__title{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 42px;
     line-height: 56px;
     letter-spacing: -2px;
     color: #FF5B1F;
     @media (max-width: 1130px) {
-      height: 24vw;
+      margin-bottom: 19px;
+      font-size: 36px;
+    }
+    @media (max-width: 767px) {
+      font-size: 55px;
+      font-weight: 600;
     }
   }
   &__desc{
@@ -82,6 +101,12 @@ $azure39: #58656D;
     font-size: 24px;
     line-height: 24px;
     color: #58656D;
+    @media (max-width: 767px){
+      font-weight: 600;
+      font-size: 22px;
+      line-height: initial;
+      color: #373737;
+    }
   }
 }
 

@@ -6,12 +6,19 @@ body {
 }
 .container {
   width: 100%;
-  max-width: 1130px;
+  max-width: 1132px;
   margin: 0 auto;
   padding: 0 16px;
 }
-
-.flex{
-  display: flex;
-  flex-wrap: wrap;
+.sm-visible{
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+.sm-hide{
+  display: block;
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
