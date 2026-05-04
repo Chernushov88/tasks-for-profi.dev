@@ -1,0 +1,137 @@
+$black: #000;
+.tabs-section {
+  margin: 80px 0;
+}
+
+.tabs-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 16px;
+
+  span {
+    color: #ff5a1f;
+  }
+}
+
+.tabs-subtitle {
+  margin-bottom: 32px;
+  color: #666;
+}
+
+.tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  margin-bottom: 81.5px;
+
+  button {
+    padding: 10px 16px;
+    border: 1px solid #ff5a1f;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: "Figtree", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    &.tab-1 {
+      .no-active{
+        display: block;
+      }
+      .active{
+        display: none;
+      }
+       &.is-active{
+        .no-active{
+          display: none;
+        }
+        .active{
+          display: block;
+        }
+       }
+    }
+    svg {
+      path {
+        stroke: #ff5a1f;
+      }
+    }
+    &.is-active {
+      background: #ff5a1f;
+      color: #fff;
+      svg {
+        path, rect{
+          stroke: #fff;
+        }
+      }
+    }
+  }
+}
+
+.tabs-content {
+  display: grid;
+  gap: 60px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  > div {
+    display: none;
+  }
+
+  > .is-active {
+    display: contents; // важливо для layout
+  }
+}
+
+
+.tab-layout{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  &__image{
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  &__info{
+    padding-top: 14px;
+    .tab-item{
+      display: flex;
+      gap: 24.85px;
+      margin-bottom: 10px;
+      color: $black;
+      &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 51.45px;
+        height: 51.45px;
+        background-color: #C4C4C4;
+        border-radius: 10px;
+      }
+      &__desc{
+        width: calc(100% - 76.5px);
+        h4{
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-size: 22px;
+          font-weight: 500;
+          color: $black;
+        }
+        p{
+          font-family: "Plus Jakarta Sans", sans-serif;
+          line-height: 1.75;
+          font-size: 16px;
+          font-weight: 400;
+          color: $black;
+        }
+      }
+
+    }
+  }
+}
