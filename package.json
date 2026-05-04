@@ -1,0 +1,49 @@
+{
+  "name": "task-for-profi.dev",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "gulpfile.js",
+    "scripts": {
+    "start": "npx gulp",
+    "build": "npx gulp build",
+    "predeploy": "npx gulp build",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "serhii.chernyshov",
+  "license": "MIT License",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chernushov88/task-for-profi.dev.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.1.1",
+    "gh-pages": "^6.3.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-debug": "^5.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-filter": "^9.0.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "prettier": "^3.7.4",
+    "sass": "^1.69.5",
+    "webpack": "^5.104.1",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+  }
+}
