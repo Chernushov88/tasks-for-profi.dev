@@ -1,0 +1,79 @@
+$azure39: #58656D;
+.grow {
+  position: relative;
+  margin: 106.5px 0;
+  &__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-image: url('../img/svg/line-desktop.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 280px;
+    position: relative;
+    z-index: 1;
+    padding: 32px 30px 32px 30px;
+    background: #fff;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.2) 0%, rgba(149, 149, 149, 0.2) 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 11.44px;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+  }
+  &-head{
+    .grow__title{
+      line-height: 38px;
+      span{
+        display: block;
+        font-size: 16px;
+        line-height: 18px;
+        color: $azure39;
+      }
+    }
+    .grow__desc{
+        font-size: 16px;
+        line-height: 18px;
+        color: $azure39;
+    }
+  }
+  &__title{
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 56px;
+    letter-spacing: -2px;
+    color: #FF5B1F;
+  }
+  &__desc{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: #58656D;
+  }
+}
+
+
+
+
+
