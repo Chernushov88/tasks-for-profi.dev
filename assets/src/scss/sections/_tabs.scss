@@ -15,7 +15,8 @@
   }
   &-pretitle{
     margin-bottom: 10px;
-    color: #58656D;
+    font-size: 15.6px;
+    color: $azure39;
     @media (max-width: 767px)  {
       margin-bottom: 7px;
       font-size: 18px;
@@ -24,10 +25,10 @@
     }
   }
   &-title {
-    font-size: 48px;
-    font-weight: 600;
+    font-size: 45px;
+    font-weight: 500;
     margin-bottom: 13px;
-    color: $colorblack;
+    color: #02051a;
     @media (max-width: 767px)  {
       margin-bottom: 21px;
       font-size: 32px;
@@ -91,8 +92,6 @@
         border-radius: 10px;
       }
     }
-
-
     button {
       display: flex;
       align-items: center;
@@ -215,9 +214,9 @@
         h4{
           font-family: "Plus Jakarta Sans", sans-serif;
           font-size: 22px;
-          font-weight: 500;
+          font-weight: 600;
           line-height: 1.5;
-          letter-spacing: -1px;
+          letter-spacing: -2%;
           color: $colorblack;
           .icon-sm-visible {
             display: none;
