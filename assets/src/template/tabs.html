@@ -5,7 +5,8 @@
       <h2 class="tabs-title">More than a <span>channel manager</span></h2>
 
       <p class="tabs-subtitle">
-        Rentals United gives you a complete tech stack...
+        Rentals United gives you a complete tech stack to manage, distribute,
+        and grow your vacation rental business.
       </p>
     </div>
 
@@ -250,29 +251,50 @@
                 stroke="#FF5B1F"
               />
             </svg>
-
             <span>Open API</span>
           </button>
         </div>
       </div>
-
       <div class="tabs-content">
         <div data-content="1" class="is-active">
           <div class="tab-layout">
             <div class="tab-layout__image">
-              <img src="./img/tabs-img.jpg" alt="tab image" title="tab image" />
+              <img
+                src="./img/tabs-img.jpg"
+                alt="tab image"
+                title="tab image"
+                class="sm-hide"
+              />
+              <img
+                src="./img/tabs-img-sm.jpg"
+                alt="tab image"
+                title="tab image"
+                class="sm-visible"
+              />
             </div>
             <div class="tab-layout__info">
               <div class="tab-item">
-                <div class="tab-item__icon">
-                  <img
-                    src="./img/svg/icon-map.svg"
-                    alt="icon map"
-                    title="icon map"
-                  />
+                <div class="sm-hide">
+                  <div class="tab-item__icon">
+                    <img
+                      src="./img/svg/icon-map.svg"
+                      alt="icon map"
+                      title="icon map"
+                    />
+                  </div>
                 </div>
+
                 <div class="tab-item__desc">
-                  <h4>Value prop 1</h4>
+                  <h4>
+                    <div class="icon-sm-visible">
+                      <img
+                        src="./img/svg/icon-map.svg"
+                        alt="icon map"
+                        title="icon map"
+                      />
+                    </div>
+                    <span>Value prop 1</span>
+                  </h4>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -281,15 +303,26 @@
                 </div>
               </div>
               <div class="tab-item">
-                <div class="tab-item__icon">
-                  <img
-                    src="./img/svg/icon-map.svg"
-                    alt="icon map"
-                    title="icon map"
-                  />
+                <div class="sm-hide">
+                  <div class="tab-item__icon">
+                    <img
+                      src="./img/svg/icon-map.svg"
+                      alt="icon map"
+                      title="icon map"
+                    />
+                  </div>
                 </div>
                 <div class="tab-item__desc">
-                  <h4>Value prop 2</h4>
+                  <h4>
+                    <div class="icon-sm-visible">
+                      <img
+                        src="./img/svg/icon-map.svg"
+                        alt="icon map"
+                        title="icon map"
+                      />
+                    </div>
+                    <span>Value prop 2</span>
+                  </h4>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -298,26 +331,40 @@
                 </div>
               </div>
               <div class="tab-item">
-                <div class="tab-item__icon">
-                  <img
-                    src="./img/svg/icon-map.svg"
-                    alt="icon map"
-                    title="icon map"
-                  />
+                <div class="sm-hide">
+                  <div class="tab-item__icon">
+                    <img
+                      src="./img/svg/icon-map.svg"
+                      alt="icon map"
+                      title="icon map"
+                    />
+                  </div>
                 </div>
                 <div class="tab-item__desc">
-                  <h4>Value prop 3</h4>
+                  <h4>
+                    <div class="icon-sm-visible">
+                      <img
+                        src="./img/svg/icon-map.svg"
+                        alt="icon map"
+                        title="icon map"
+                      />
+                    </div>
+                    <span>Value prop 3</span>
+                  </h4>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. ea commodo consequat.
                   </p>
                 </div>
+              </div>
+
+              <div class="sm-visible">
+                <button class="btn">Get Started <span>&rsaquo;</span></button>
               </div>
             </div>
           </div>
         </div>
-
         <div data-content="2">
           <div class="tab-layout">
             <div class="tab-layout__image">
@@ -328,49 +375,8 @@
             </div>
           </div>
         </div>
-
         <div data-content="3">
-          <div class="tab-layout">
-            <div class="tab-layout__info">
-              <div class="tab-item">
-                <div class="tab-item__icon">
-                  <img
-                    src="./img/svg/icon-map.svg"
-                    alt="icon map"
-                    title="icon map"
-                  />
-                </div>
-                <div class="tab-item__desc">
-                  <h4>Value prop 2</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. ea commodo consequat.
-                  </p>
-                </div>
-              </div>
-              <div class="tab-item">
-                <div class="tab-item__icon">
-                  <img
-                    src="./img/svg/icon-map.svg"
-                    alt="icon map"
-                    title="icon map"
-                  />
-                </div>
-                <div class="tab-item__desc">
-                  <h4>Value prop 3</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. ea commodo consequat.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-layout__image">
-              <img src="./img/tabs-img.jpg" alt="tab image" title="tab image" />
-            </div>
-          </div>
+          <div class="tab-layout"></div>
         </div>
         <div data-content="4">44</div>
         <div data-content="5">55</div>

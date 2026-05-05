@@ -1,141 +1,202 @@
-$black: #000;
-.tabs-section {
-  margin: 60px 0;
-  padding: 20px 0;
-  @media (max-width: 767px)  {
-    background: #FAF5F3;
-    &__top{
-      padding: 0 23px;
-    }
-  }
-}
-
-.tabs-title {
-  font-size: 48px;
-  font-weight: 600;
-  margin-bottom: 16px;
-
-  span {
-    color: #ff5a1f;
-  }
-}
+@use "../base/variables" as *;
 
 .tabs{
+  &-section {
+    margin: 43px 0;
+    padding: 0px 0;
+    @media (max-width: 767px)  {
+      margin: 40px 0;
+      &__top{
+        background: #FAF5F3;
+        padding: 18px 23px 0;
+          letter-spacing: -3%;
+      }
+    }
+  }
   &-pretitle{
     margin-bottom: 10px;
     color: #58656D;
+    @media (max-width: 767px)  {
+      margin-bottom: 7px;
+      font-size: 18px;
+      color: $colorblack;
+      line-height: 1.2;
+    }
+  }
+  &-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 13px;
+    color: $colorblack;
+    @media (max-width: 767px)  {
+      margin-bottom: 21px;
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+    span {
+      color: $colororange;
+    }
   }
   &-subtitle {
-    margin-bottom: 32px;
-    padding-left: 15px;
-    color: $black;
-  }
-}
-
-simple-tabs{
-  overflow: hidden;
-}
-.tabs-nav {
-  display: flex;
-  gap: 34px;
-  margin-bottom: 81.5px;
-  &__scroll{
-    width: 1100px;
-    overflow-x: scroll;
-  }
-  @media (max-width: 1130px) {
-    gap: 28px;
-  }
-  @media (max-width: 767px) {
-    gap: 24px;
-  }
-  button {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    padding: 10px 16px;
-    border: 1px solid #ff5a1f;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 6px;
-    font-family: "Figtree", sans-serif;
-    font-size: 15px;
-    color: #ff5a1f;
-    &.is-active{
-      color: #fff;
+    line-height: 24px;
+    padding: 0 0 32px 24px;
+    color: $colorblack;
+    @media (max-width: 767px)  {
+      padding: 0 0 21px 0;
+      font-size: 18px;
+      line-height: 1.2;
     }
-    &.tab-1 {
-      .no-active{
-        display: block;
+  }
+  &-nav {
+    display: inline-flex;
+    gap: 34px;
+    min-width: max-content;
+    margin-bottom: 81.5px;
+    @media (max-width: 1130px) {
+      gap: 28px;
+    }
+    @media (max-width: 767px) {
+      gap: 25.43px;
+      margin-bottom: 24px;
+      padding-left: 23px;
+    }
+    &__scroll{
+      position: relative;
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+      @media (max-width: 1130px)  {
+        margin-bottom:9.5px;
       }
-      .active{
+      &::-webkit-scrollbar {
         display: none;
       }
-       &.is-active{
-        .no-active{
-          display: none;
+      @media (max-width: 767px)  {
+        margin-bottom: 0;
+        background: #FAF5F3;
+      }
+      &:hover {
+        margin-bottom: 0;
+        scrollbar-width: thin;
+      }
+      &::-webkit-scrollbar {
+        height: 0;
+      }
+      &:hover::-webkit-scrollbar {
+        height: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.3);
+        border-radius: 10px;
+      }
+    }
+
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      padding: 10px 16px;
+      border: 1px solid $colororange;
+      background: transparent;
+      cursor: pointer;
+      border-radius: 6px;
+      font-family: "Figtree", sans-serif;
+      font-size: 15px;
+      color: $colororange;
+      user-select: none;
+      pointer-events: auto;
+      @media (max-width: 767px)  {
+        padding: 3.5px 8px;
+        font-size: 11.14px;
+        img, svg{
+          transfor: scale(0.8);
         }
-        .active{
+      }
+      &.is-active{
+        color: #fff;
+      }
+      &.tab-1 {
+        .no-active{
           display: block;
         }
-       }
-    }
-    svg {
-      path {
-        stroke: #ff5a1f;
+        .active{
+          display: none;
+        }
+        &.is-active{
+          .no-active{
+            display: none;
+          }
+          .active{
+            display: block;
+          }
+        }
       }
-    }
-    &.is-active {
-      background: #ff5a1f;
-      color: #fff;
       svg {
-        path, rect{
-          stroke: #fff;
+        path {
+          stroke: $colororange;
+        }
+      }
+      &.is-active {
+        background: $colororange;
+        color: #fff;
+        svg {
+          path, rect{
+            stroke: #fff;
+          }
         }
       }
     }
   }
+
+  &-content {
+    display: grid;
+    gap: 60px;
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      background: #faf5f3;
+    }
+
+    & > div {
+      display: none;
+    }
+
+    & > .is-active {
+      display: contents;
+    }
+  }
 }
-
-.tabs-content {
-  display: grid;
-  gap: 60px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-
-  > div {
-    display: none;
-  }
-
-  > .is-active {
-    display: contents; // важливо для layout
-  }
-}
-
 
 .tab-layout{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-
+  gap: 23px;
   @media (min-width: 768px) {
+    gap: 60px;
     grid-template-columns: 1fr 1fr;
   }
   &__image{
     img{
       display: block;
       width: 100%;
+      @media (max-width: 767px) {
+        height: 348px;
+        object-fit: cover;
+      }
     }
+
   }
   &__info{
     padding-top: 14px;
+    @media (max-width: 767px) {
+      padding: 0 32px 23px 32px;
+    }
     .tab-item{
       display: flex;
       gap: 24.85px;
       margin-bottom: 10px;
-      color: $black;
+      color: $colorblack;
       &__icon{
         display: flex;
         align-items: center;
@@ -148,21 +209,57 @@ simple-tabs{
       }
       &__desc{
         width: calc(100% - 76.5px);
+        @media (max-width: 767px) {
+          width: 100%;
+        }
         h4{
           font-family: "Plus Jakarta Sans", sans-serif;
           font-size: 22px;
           font-weight: 500;
-          color: $black;
+          line-height: 1.5;
+          letter-spacing: -1px;
+          color: $colorblack;
+          .icon-sm-visible {
+            display: none;
+          }
+          @media (max-width: 767px) {
+            display: flex;
+            align-items: center;
+            gap:10px;
+            margin-bottom: 10px;
+            font-size: 31px;
+            line-height: 42px;
+            color: $colororange;
+            .icon-sm-visible {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 26px;
+              height: 26px;
+              background-color: $colororange;
+              border-radius: 5px;
+              img{
+                transform: scale(0.5);
+              }
+            }
+          }
         }
         p{
           font-family: "Plus Jakarta Sans", sans-serif;
           line-height: 1.75;
           font-size: 16px;
           font-weight: 400;
-          color: $black;
+          color: $colorblack;
+          @media (max-width: 767px) {
+            font-family: Figtree, sans-serif;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: justify;
+          }
         }
       }
-
     }
   }
 }
+
+

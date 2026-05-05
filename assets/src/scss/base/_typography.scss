@@ -1,24 +1,26 @@
 body {
+  overflow-x: hidden;
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
 }
 .container {
   width: 100%;
-  max-width: 1132px;
+  max-width: 1141px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20.5px;
 }
 .sm-visible{
-  display: none;
+  display: none !important;
   @media (max-width: 767px) {
-    display: block;
+    display: block !important;
   }
 }
 .sm-hide{
-  display: block;
+  display: block !important;
   @media (max-width: 767px) {
-    display: none;
+    display: none !important  ;
   }
 }
